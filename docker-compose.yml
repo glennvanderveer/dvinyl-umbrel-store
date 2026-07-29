@@ -1,0 +1,27 @@
+services:
+  app_proxy:
+    environment:
+      APP_HOST: dvinyl-store-dvinyl_dvinyl-app_1
+      APP_PORT: 3099
+
+  dvinyl-app:
+    image: ghcr.io/kyonew/dvinyl:latest
+    restart: on-failure
+    stop_grace_period: 1m
+    depends_on:
+      - mongodb
+    environment:
+      MONGODB_URL: mongodb://mongodb:27017/dvinyl
+      VINYL_PORT: 3099
+      PROD: "false"
+      PASSJWT: $APP_PASSWORD
+      SESSION_SECRET: $APP_SEED
+      DISCOGS_TOKEN: ""
+    volumes:
+      - ${APP_DATA_DIR}/data/uploads:/app/public/uploads
+
+  mongodb:
+    image: mongo:latest
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/mongo:/data/db

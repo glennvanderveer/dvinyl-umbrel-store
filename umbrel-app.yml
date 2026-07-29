@@ -1,0 +1,32 @@
+manifestVersion: 1.1
+id: dvinyl-store-dvinyl
+category: files
+name: DVinyl
+version: "2.5.0"
+tagline: Catalog your vinyl, CDs, books, movies and games
+description: >-
+  DVinyl is a self-hostable collection manager for physical media
+  enthusiasts. Catalog vinyl records, CDs, and cassettes with Discogs
+  metadata and live market value estimates, then extend into books, movies,
+  and games with the Hardcover, TMDB, and IGDB integrations. Import an
+  entire existing Discogs collection in one click, track where each item
+  lives on your shelves, and browse everything through a customizable,
+  mobile-friendly dashboard.
+developer: Kyonew
+website: https://github.com/Kyonew/DVinyl
+dependencies: []
+repo: https://github.com/Kyonew/DVinyl
+support: https://github.com/Kyonew/DVinyl/issues
+port: 3099
+gallery:
+  - https://github.com/Kyonew/DVinyl/raw/main/docs/img/desktop-dashboard.jpg
+  - https://github.com/Kyonew/DVinyl/raw/main/docs/img/desktop-collection.jpg
+  - https://github.com/Kyonew/DVinyl/raw/main/docs/img/desktop-detail.jpg
+releaseNotes: >-
+  Packaged for umbrelOS. See https://github.com/Kyonew/DVinyl/releases for
+  upstream release notes.
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: ""
+submission: ""
